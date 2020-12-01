@@ -6,7 +6,7 @@
   "author": "SAP",
   "license": "ISC",
   "dependencies": {
-    "@sap/approuter": "^8.5.4"
+    "@sap/approuter": "^8.6.1"
   },
   "engines": {
     "node": "10.x.x"
