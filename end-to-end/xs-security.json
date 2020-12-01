@@ -1,0 +1,57 @@
+{
+  "xsappname": "myapp",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "Token Exchange"
+    },
+    {
+      "name": "$XSAPPNAME.User",
+      "description": "User Scope"
+    },
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Admin Scope"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "TOKEN_EXCHANGE",
+      "scope-references": [
+        "uaa.user"
+      ]
+    },
+    {
+      "name": "MyAppUser",
+      "description": "MyApp User",
+      "scope-references": [
+        "$XSAPPNAME.User"
+      ]
+    },
+    {
+      "name": "MyAppAdministrator",
+      "description": "MyApp Administrator",
+      "scope-references": [
+        "$XSAPPNAME.User",
+        "$XSAPPNAME.Admin"
+      ]
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "MyApp User",
+      "description": "MyApp User",
+      "role-template-references": [
+        "$XSAPPNAME.MyAppUser"
+      ]
+    },
+    {
+      "name": "MyApp Administrator",
+      "description": "MyApp Administrator",
+      "role-template-references": [
+        "$XSAPPNAME.MyAppAdministrator"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "myapp",
+  "version": "0.0.2",
+  "private": true,
+  "description": "My App",
+  "keywords": [
+    "docker"
+  ],
+  "author": "Denys van Kempen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -1,0 +1,17 @@
+_schema-version: "3.2" 
+ID: app
+version: 0.0.1
+
+modules: 
+  - name: myapp
+    type: staticfile
+    path: content.zip
+    requires:
+      - name: myapp-service
+
+resources:
+  - name: myapp-service
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: application-logs
+      service-plan: lite

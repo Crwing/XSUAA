@@ -1,0 +1,47 @@
+{
+  "xsappname": "myapp",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Display",
+      "description": "Display Users"
+    },
+    {
+      "name": "$XSAPPNAME.Update",
+      "description": "Update Users"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "View Users",
+      "scope-references": [
+        "$XSAPPNAME.Display"
+      ]
+    },
+    {
+      "name": "Manager",
+      "description": "Maintain Users",
+      "scope-references": [
+        "$XSAPPNAME.Display",
+        "$XSAPPNAME.Update"
+      ]
+    }
+  ],
+  "role-collections": [
+      {
+          "name": "Viewer",
+          "description": "View Users",
+          "role-template-references": [
+              "$XSAPPNAME.Viewer"
+          ]
+      },
+      {
+          "name": "Manager",
+          "description": "Maintain Users",
+          "role-template-references": [
+              "$XSAPPNAME.Manager"
+          ]
+      }
+  ]
+}

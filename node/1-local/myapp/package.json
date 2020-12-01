@@ -1,0 +1,13 @@
+{
+  "name": "myapp",
+  "version": "0.0.1",
+  "private": true,
+  "description": "My App",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

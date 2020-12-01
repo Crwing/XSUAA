@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>XSUAA End-to-End Tutorial</title>
+</head>
+<body>
+  <h1>XSUAA End-to-End Tutorial</h1>
+  <h2>JWT</h2>
+  <p>Code: <code>app.get('/srv/authinfo', function (req, res) {res.status(200).json(req.authInfo);});</code></p>
+  <p>Decode the JTW</p>
+  <ol>
+    <li>Retrieve and copy the <a href="/srv/authinfo" target="_blank" rel="noopener">JWT</a> (web token in JavaScript Object Notation [JSON] format)<sup>*</sup></li>
+    <li>Go to <a href="https://jwt.io" target="_blank" rel="noopener">jwt.io</a> to decode the token (and optionally the signature / public key</li>
+  </ol>
+  <p><sup>*</sup> Tip: Use the <a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh" target="_blank" rel="noopener">JSON Viewer</a> Chrome extension to format the output.</p>
+  <p><img src="img/jwt.png" alt="jwt.io"></p>
+  <h2>Scopes</h2>
+  <p>Code: <code>var isAuthorized = req.authInfo.checkScope('$XSAPPNAME.User');</code></p>
+  <p>Verify granted scopes:</p>
+  <ol>
+    <li><a href="/srv/user" target="_blank" rel="noopener">User Role</a></li>
+    <li><a href="/srv/admin" target="_blank" rel="noopener">Admin Role</a></li>
+  </ol>
+  <p>Business logic returns <strong>"Forbidden"</strong> when no scope not found. </p>
+  <p>Grant roles Trial Home > TRAIL_ACCOUNT > PROVIDER/REGION > Security: Trust Configuration > sap.default > Assign Role Collection.</p>
+  <p><img src="img/rolecollection.png" alt="jwt.io"></p>
+</body>
+</html>
