@@ -1,0 +1,18 @@
+{
+  "welcomeFile": "index.html",
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "source": "^/srv/(.*)$",
+      "destination": "srv"
+    },
+    {
+      "source": "^/srvxs/(.*)$",
+      "destination": "srvxs"
+    },
+    {
+      "source": "/(.*)",
+      "localDir": "resources"
+    }
+  ]
+}

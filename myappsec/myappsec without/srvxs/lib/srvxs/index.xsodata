@@ -1,0 +1,3 @@
+service namespace "myappsec.db" {
+  "myappsec.db::students" as "students";
+}
