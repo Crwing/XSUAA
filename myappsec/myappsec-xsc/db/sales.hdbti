@@ -1,0 +1,8 @@
+import = [
+            {
+                table = "myappsec.db::sales";
+                schema = "myappsec";
+                file = "myappsec.db:sales.csv"; 
+                header = true;
+            }
+         ];

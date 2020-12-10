@@ -1,0 +1,13 @@
+{
+    "dependencies": {
+        "express": "latest",
+        "body-parser": "latest",
+        "@sap/hdbext": "latest",
+        "@sap/xsenv": "latest",
+        "@sap-cloud-sdk/core": "latest",
+        "@sap/cloud-sdk-vdm-sales-order-service": "latest"
+    },
+    "scripts": {
+        "start": "node server.js"
+    }
+}

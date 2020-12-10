@@ -1,0 +1,8 @@
+table.schemaName = "myappsec";
+table.tableType = COLUMNSTORE;
+table.columns = [
+	{name = "id"; sqlType = INTEGER; nullable = false;},
+	{name = "region"; sqlType = NVARCHAR; nullable = true; length = 100;},
+	{name = "country"; sqlType = NVARCHAR; nullable = true; length = 100;},
+	{name = "amount"; sqlType = INTEGER; nullable = true;}];
+table.primaryKey.pkcolumns = ["id"];

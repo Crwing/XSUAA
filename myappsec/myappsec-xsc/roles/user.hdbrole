@@ -1,0 +1,4 @@
+role myappsec.roles::user {
+  schema myappsec.db:myappsec.hdbschema: SELECT;
+  application privilege: "myappsec::user";
+}

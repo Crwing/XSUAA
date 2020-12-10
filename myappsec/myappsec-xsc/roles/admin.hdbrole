@@ -1,0 +1,5 @@
+role myappsec.roles::admin
+{
+schema myappsec.db:myappsec.hdbschema: CREATE ANY, CREATE TEMPORARY TABLE, CREATE VIRTUAL FUNCTION PACKAGE, ALTER, DROP, EXECUTE, SELECT, INSERT, UPDATE, DELETE, INDEX, TRIGGER, DEBUG, REFERENCES;
+application privilege: "myappsec::admin";
+}
