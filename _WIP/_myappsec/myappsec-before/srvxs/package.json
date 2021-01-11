@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "@sap/xsenv": "latest",
-    "@sap/xsjs": "latest"
-  },
-  "scripts": {
-    "start": "node server.js"
-  }
-}
